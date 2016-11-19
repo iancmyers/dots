@@ -3,6 +3,7 @@ alias ..="cd .."
 
 # Common directories
 alias p="cd ~/projects"
+alias dots="cd ~/projects/dots"
 
 # Be polite
 alias please='sudo'
