@@ -1,0 +1,17 @@
+tap 'caskroom/cask'
+tap 'homebrew/dupes'
+
+brew 'git'
+brew 'rbenv'
+brew 'ruby-build'
+brew 'shellcheck'
+
+cask '1password'
+cask 'atom'
+cask 'dropbox'
+cask 'google-chrome'
+cask 'google-chrome-canary'
+cask 'iterm2'
+cask 'slack'
+cask 'spotify'
+cask 'vlc'

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+
+apm install --packages-file ~/projects/dots/Atomfile
