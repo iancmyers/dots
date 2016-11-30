@@ -12,9 +12,9 @@
 	# Remove branches that have already been merged with master
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
   # Show who has touched a file or path
-  who = "!git log --ignore-all-space --pretty=format:'%Cgreen%<(30)%aN%Creset %Cblue<%aE>%Creset' \"${@-HEAD}\" \
+  who = "!f() { git log --ignore-all-space --pretty=format:'%Cgreen%<(30)%aN%Creset %Cblue<%aE>%Creset' \"${@-HEAD}\" \
     | nl | sort --key=2 | uniq -c -f 1 | sort --numeric-sort --key=2 \
-    | awk '{$2=\"\"; print $0}'"
+    | awk '{$2=\"\"; print $0}'; }; f"
 
 [apply]
 	# Detect whitespace errors when applying a patch
