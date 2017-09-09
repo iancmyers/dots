@@ -54,10 +54,10 @@ function parse_git_dirty {
 tput sgr0; # reset colors
 bold=$(tput bold);
 reset=$(tput sgr0);
-dark_grey=$(tput setaf 237);
+electric_blue=$(tput setaf 33);
 cyan=$(tput setaf 37);
 white=$(tput setaf 15);
 bright_yellow=$(tput setaf 190);
 
-export PS1="\[${dark_grey}\]\w\[${bright_yellow}\]\$(parse_git_branch)\[${white}\]→ \[${reset}\]"
+export PS1="\[${electric_blue}\]\w\[${bright_yellow}\]\$(parse_git_branch)\[${white}\]→ \[${reset}\]"
 export PS2="\[${cyan}\]→ \[${reset}\]"
