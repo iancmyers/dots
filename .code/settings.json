@@ -21,5 +21,6 @@
         ".path": "shellscript",
         ".private": "shellscript",
         "Brewfile": "properties"
-    }
+    },
+    "workbench.startupEditor": "newUntitledFile"
 }
