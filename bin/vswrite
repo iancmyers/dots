@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+
+code --list-extensions > $HOME/.code/VSCodefile

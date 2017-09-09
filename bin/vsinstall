@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -e
+
+EXTENSIONS=$(<$HOME/.code/VSCodefile)
+
+for EXTENSION in ${EXTENSIONS[@]}; do
+  code --install-extension $EXTENSION
+done

@@ -3,22 +3,6 @@ set -e
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-ln -sFi $CURRENT_DIR/.atom $HOME
-ln -sFi $CURRENT_DIR/.aliases $HOME
-ln -sFi $CURRENT_DIR/.bash_prompt $HOME
-ln -sFi $CURRENT_DIR/.bash_profile $HOME
-ln -sFi $CURRENT_DIR/.exports $HOME
-ln -sFi $CURRENT_DIR/.functions $HOME
-ln -sFi $CURRENT_DIR/.gitconfig $HOME
-ln -sFi $CURRENT_DIR/.gitignore $HOME
-ln -sFi $CURRENT_DIR/.path $HOME
-ln -sFi $CURRENT_DIR/.private $HOME
-
-mkdir -p $HOME/bin
-
-ln -sFi $CURRENT_DIR/bin/atomwrite $HOME/bin
-ln -sFi $CURRENT_DIR/bin/atomload $HOME/bin
-
 touch $CURRENT_DIR/.private
 
 # Install nvm

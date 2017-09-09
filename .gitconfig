@@ -29,8 +29,10 @@
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of
 	# a line
 	whitespace = space-before-tab,trailing-space
+	# Make VSCode the default editor
+	editor = code --wait
 	# Make Atom the default editor
-	editor = atom --wait
+	# editor = atom --wait
 	# Make `git rebase` safer on OS X
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
