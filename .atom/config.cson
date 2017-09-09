@@ -16,7 +16,8 @@
     userId: "c5672042-1eab-f85a-5b1b-cbed86e612ee"
   linter:
     showErrorPanel: false
-  "linter-eslint": {}
+  "linter-eslint":
+    useGlobalEslint: true
   react: {}
   "sync-settings":
     _analyticsUserId: "a5efce43-8508-472e-994d-ac0a7efc29cc"
