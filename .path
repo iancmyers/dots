@@ -23,4 +23,7 @@ PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 # Android
 PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
+# VSCode
+PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
 export PATH
