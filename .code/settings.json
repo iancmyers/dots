@@ -11,7 +11,7 @@
         80,
         100
     ],
-    "editor.fontFamily": "Operator Mono, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "Input Mono, Operator Mono, Monaco, 'Courier New', monospace",
     "editor.fontSize": 14,
     "files.associations": {
         ".exports": "shellscript",
