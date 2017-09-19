@@ -12,7 +12,7 @@
         100
     ],
     "editor.fontFamily": "Input Mono, Operator Mono, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 14,
+    "editor.fontSize": 12,
     "files.associations": {
         ".exports": "shellscript",
         ".bash_prompt": "shellscript",
