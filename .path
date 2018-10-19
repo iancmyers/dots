@@ -26,4 +26,7 @@ PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 # VSCode
 PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
+# Yarn
+PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 export PATH
