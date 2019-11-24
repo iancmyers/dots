@@ -24,5 +24,6 @@
     },
     "workbench.startupEditor": "newUntitledFile",
     "files.insertFinalNewline": true,
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true
 }
