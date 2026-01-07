@@ -23,10 +23,11 @@ CODE_FILES=(
 
 for FILE in ${DOT_FILES[@]}; do
   echo "Creating symlink to $FILE in $HOME."
-  ln -sFf $CURRENT_DIR/$FILE $HOME
+  ln -sfn "$CURRENT_DIR/$FILE" "$HOME/$FILE"
 done
 
 for FILE in ${CODE_FILES[@]}; do
   echo "Creating symlink to $FILE in VSCode directory."
-  ln -sFf $HOME/.code/$FILE $HOME/Library/Application\ Support/Code/User/
+  mkdir -p "$HOME/Library/Application Support/Code/User"
+  ln -sfn "$CURRENT_DIR/.code/$FILE" "$HOME/Library/Application Support/Code/User/$FILE"
 done
