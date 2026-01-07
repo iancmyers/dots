@@ -1,13 +1,12 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 set -e
 
-CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+CURRENT_DIR="$(cd "$(dirname "${(%):-%N}")" && pwd)"
 
 DOT_FILES=(
-  ".atom" \ 
   ".aliases" \
-  ".bash_prompt" \
-  ".bash_profile" \
+  ".zshrc" \
+  ".zprofile" \
   ".exports" \
   ".functions" \
   ".gitconfig" \
@@ -17,29 +16,14 @@ DOT_FILES=(
   ".code" \
 )
 
-BIN_FILES=(
-  "atomwrite" \
-  "atomload" \
-  "vsinstall" \
-  "vswrite" \
-)
-
 CODE_FILES=(
   "settings.json" \
-  "vsicons.settings.json" \
   "snippets" \
 )
 
 for FILE in ${DOT_FILES[@]}; do
   echo "Creating symlink to $FILE in $HOME."
   ln -sFf $CURRENT_DIR/$FILE $HOME
-done
-
-mkdir -p $HOME/bin
-
-for FILE in ${BIN_FILES[@]}; do
-  echo "Creating symlink to $FILE in $HOME/bin."
-  ln -sFf $CURRENT_DIR/bin/$FILE $HOME/bin
 done
 
 for FILE in ${CODE_FILES[@]}; do
