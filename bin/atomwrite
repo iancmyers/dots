@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-set -e
-
-apm list --installed --bare > ~/projects/dots/Atomfile
