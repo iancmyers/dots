@@ -1,29 +1,49 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "workbench.iconTheme": "simple-icons",
-    "workbench.colorTheme": "Monokai Vibrant",
-    "vsicons.dontShowNewVersionMessage": true,
-    "atomKeymap.promptV3Features": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true,
-    "editor.tabSize": 2,
-    "editor.rulers": [
-        80,
-        100
-    ],
-    "editor.fontFamily": "Input Mono, Operator Mono, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 12,
-    "files.associations": {
-        ".exports": "shellscript",
-        ".bash_prompt": "shellscript",
-        ".aliases": "shellscript",
-        ".functions": "shellscript",
-        ".path": "shellscript",
-        ".private": "shellscript",
-        "Brewfile": "properties"
-    },
-    "workbench.startupEditor": "newUntitledFile",
-    "files.insertFinalNewline": true,
-    "files.autoSave": "onFocusChange",
-    "editor.formatOnSave": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "editor.rulers": [80, 100],
+  "editor.fontFamily": "Input Mono, Operator Mono, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 12,
+  "files.associations": {
+    ".exports": "shellscript",
+    ".bash_prompt": "shellscript",
+    ".aliases": "shellscript",
+    ".functions": "shellscript",
+    ".path": "shellscript",
+    ".private": "shellscript",
+    "Brewfile": "properties",
+    "*.webc": "html"
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "files.insertFinalNewline": true,
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "json.schemas": [
+    {
+      "name": "vscode-expo-manifest",
+      "url": "file:///Users/iancmyers/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-44.0.0.json",
+      "fileMatch": ["app.json", "app.config.json"]
+    }
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "github.copilot.advanced": {},
+  "workbench.settings.applyToAllProfiles": [
+    "github.copilot.chat.agent.runTasks"
+  ],
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.includeLanguages": {
+    "erb": "html"
+  },
+  "workbench.iconTheme": "charmed-warm",
+  "workbench.colorTheme": "One Dark Pro Night Flat"
 }
