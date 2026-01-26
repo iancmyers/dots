@@ -1,9 +1,8 @@
 .DS_Store
 
-.atom/.apm
-.atom/packages
-.atom/blob-store
-
 .private
 
 npm-debug.log
+
+# Machine-specific VS Code settings
+.code/settings.local.json

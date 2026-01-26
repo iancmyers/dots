@@ -1,4 +1,5 @@
-// Place your settings in this file to overwrite the default settings
+// Shared settings - portable across machines
+// Machine-specific settings go in settings.local.json (see settings.local.example.json)
 {
   "vsicons.dontShowNewVersionMessage": true,
   "atomKeymap.promptV3Features": true,
@@ -23,13 +24,6 @@
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "json.schemas": [
-    {
-      "name": "vscode-expo-manifest",
-      "url": "file:///Users/iancmyers/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-44.0.0.json",
-      "fileMatch": ["app.json", "app.config.json"]
-    }
-  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
@@ -45,5 +39,9 @@
     "erb": "html"
   },
   "workbench.iconTheme": "charmed-warm",
-  "workbench.colorTheme": "One Dark Pro Night Flat"
+  "workbench.colorTheme": "One Dark Pro Night Flat",
+  "claudeCode.preferredLocation": "sidebar",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.editor.showTabs": "single",
+  "vscoconut.airbnb-project-view.groupingMode": "prefix"
 }

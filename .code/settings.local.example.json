@@ -1,0 +1,22 @@
+// Machine-specific settings template
+// Copy this to settings.local.json and customize for your machine
+{
+  // Claude Code settings (Airbnb-specific)
+  "claudeCode.environmentVariables": [
+    {
+      "name": "CLAUDE_CODE_SKIP_AUTH_LOGIN",
+      "value": "true"
+    }
+  ],
+  "claudeCode.claudeProcessWrapper": "/usr/local/bin/airchat_cli_vscode_wrapper",
+  "claudeCode.selectedModel": "us.anthropic.claude-opus-4-5-20251101-v1:0",
+
+  // JSON schemas with local paths
+  "json.schemas": [
+    {
+      "name": "vscode-expo-manifest",
+      "url": "file:///Users/YOUR_USERNAME/Library/Application%20Support/Code/User/globalStorage/bycedric.vscode-expo/manifest-44.0.0.json",
+      "fileMatch": ["app.json", "app.config.json"]
+    }
+  ]
+}

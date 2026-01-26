@@ -23,36 +23,31 @@ setopt CORRECT
 # * Recursive globbing, e.g. `echo **/*.txt`
 setopt AUTO_CD
 
-# Use rbenv (only if installed)
-if command -v rbenv >/dev/null 2>&1; then
-  eval "$(rbenv init -)"
-fi
-
-# Use nvm
-export NVM_DIR="$HOME/.nvm"
-if [ -s "$NVM_DIR/nvm.sh" ]; then
-  \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  autoload -U add-zsh-hook
-
-  load-nvmrc() {
-    local nvmrc_path
-    nvmrc_path="$(nvm_find_nvmrc)"
-
-    if [ -n "$nvmrc_path" ]; then
-      local nvmrc_node_version
-      nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-      if [ "$nvmrc_node_version" = "N/A" ]; then
-        nvm install
-      elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
-        nvm use
-      fi
-    elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
-      echo "Reverting to nvm default version"
-      nvm use default
-    fi
+# Lazy load rbenv - only loads when you first use ruby/gem/bundle
+if [ -d "$HOME/.rbenv" ]; then
+  _rbenv_lazy_load() {
+    unset -f ruby gem bundle rbenv 2>/dev/null
+    eval "$(rbenv init -)"
   }
 
-  add-zsh-hook chpwd load-nvmrc
-  load-nvmrc
+  ruby() { _rbenv_lazy_load; ruby "$@"; }
+  gem() { _rbenv_lazy_load; gem "$@"; }
+  bundle() { _rbenv_lazy_load; bundle "$@"; }
+  rbenv() { _rbenv_lazy_load; rbenv "$@"; }
+fi
+
+# Lazy load nvm - only loads when you first use nvm/node/npm/npx
+export NVM_DIR="$HOME/.nvm"
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  # Placeholder functions that load nvm on first use
+  _nvm_lazy_load() {
+    unset -f nvm node npm npx 2>/dev/null
+    \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  }
+
+  nvm() { _nvm_lazy_load; nvm "$@"; }
+  node() { _nvm_lazy_load; node "$@"; }
+  npm() { _nvm_lazy_load; npm "$@"; }
+  npx() { _nvm_lazy_load; npx "$@"; }
 fi

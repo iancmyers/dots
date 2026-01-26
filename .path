@@ -4,16 +4,6 @@ PATH="/usr/local/lib:$PATH"
 # Mine
 PATH="$HOME/bin:$PATH"
 
-# Git
-PATH="/usr/bin/git:$PATH"
-
-# rbenv
-PATH="$HOME/.rbenv/bin:$PATH"
-PATH="$HOME/.rbenv/shims:$PATH"
-
-# AWS's ELB CLI
-PATH="/usr/local/bin/aws-elb-cli/eb/macosx/python2.7:$PATH"
-
 # npm installed modules for a given project
 PATH="./node_modules/.bin:$PATH"
 
