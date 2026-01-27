@@ -1,5 +1,3 @@
-// Shared settings - portable across machines
-// Machine-specific settings go in settings.local.json (see settings.local.example.json)
 {
   "vsicons.dontShowNewVersionMessage": true,
   "atomKeymap.promptV3Features": true,
