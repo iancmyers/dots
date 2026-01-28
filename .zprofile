@@ -1,27 +1,14 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 
-# Load the shell dotfiles, and then some:
+# Load environment-related dotfiles:
 # * ~/.path can be used to extend `$PATH`.
-# * ~/.private can be used for other settings you don’t want to commit.
-for file in ~/.{path,exports,zshrc,aliases,functions,private}; do
+# * ~/.exports can be used for other environment variables.
+# * ~/.private can be used for settings you don't want to commit.
+for file in ~/.{path,exports,private}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
-
-# Case-insensitive globbing (used in pathname expansion)
-setopt NO_CASE_GLOB
-
-# Append to the Zsh history file, rather than overwriting it
-setopt APPEND_HISTORY
-
-# Autocorrect typos in path names when using `cd`
-setopt CORRECT
-
-# Enable some Zsh features:
-# * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
-# * Recursive globbing, e.g. `echo **/*.txt`
-setopt AUTO_CD
 
 # Lazy load rbenv - only loads when you first use ruby/gem/bundle
 if [ -d "$HOME/.rbenv" ]; then

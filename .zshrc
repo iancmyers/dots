@@ -1,6 +1,21 @@
 #!/usr/bin/env zsh
-setopt PROMPT_SUBST
 
+# Load shell dotfiles for interactive features:
+# * ~/.aliases for command aliases
+# * ~/.functions for shell functions
+for file in ~/.{aliases,functions}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
+
+# Shell options
+setopt PROMPT_SUBST
+setopt NO_CASE_GLOB      # Case-insensitive globbing (used in pathname expansion)
+setopt APPEND_HISTORY    # Append to the Zsh history file, rather than overwriting it
+setopt CORRECT           # Autocorrect typos in path names when using `cd`
+setopt AUTO_CD           # `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
+
+# Prompt configuration
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats '%F{37}(%b)%f'         # shows (branch) in light grey
