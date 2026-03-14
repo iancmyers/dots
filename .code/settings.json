@@ -15,7 +15,7 @@
     ".path": "shellscript",
     ".private": "shellscript",
     "Brewfile": "properties",
-    "*.webc": "html"
+    "*.webc": "html",
   },
   "workbench.startupEditor": "newUntitledFile",
   "files.insertFinalNewline": true,
@@ -24,22 +24,23 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
   },
   "github.copilot.advanced": {},
   "workbench.settings.applyToAllProfiles": [
-    "github.copilot.chat.agent.runTasks"
+    "github.copilot.chat.agent.runTasks",
   ],
   "editor.quickSuggestions": {
-    "strings": "on"
+    "strings": "on",
   },
   "tailwindCSS.includeLanguages": {
-    "erb": "html"
+    "erb": "html",
   },
   "workbench.iconTheme": "charmed-warm",
   "workbench.colorTheme": "One Dark Pro Night Flat",
-  "claudeCode.preferredLocation": "sidebar",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.editor.showTabs": "single",
-  "vscoconut.airbnb-project-view.groupingMode": "prefix"
+  "vscoconut.airbnb-project-view.groupingMode": "prefix",
+  "security.promptForLocalFileProtocolHandling": false,
+  "claudeCode.preferredLocation": "panel",
 }

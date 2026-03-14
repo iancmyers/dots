@@ -10,6 +10,7 @@ DOT_FILES=(
   ".aliases" \
   ".zshrc" \
   ".zprofile" \
+  ".zshenv" \
   ".exports" \
   ".functions" \
   ".gitconfig" \
