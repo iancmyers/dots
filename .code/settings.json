@@ -5,8 +5,8 @@
   "editor.formatOnPaste": true,
   "editor.tabSize": 2,
   "editor.rulers": [80, 100],
-  "editor.fontFamily": "Input Mono, Operator Mono, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 12,
+  "editor.fontFamily": "Monaspace Krypton Var, Input Mono, Operator Mono, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
   "files.associations": {
     ".exports": "shellscript",
     ".bash_prompt": "shellscript",
@@ -15,7 +15,7 @@
     ".path": "shellscript",
     ".private": "shellscript",
     "Brewfile": "properties",
-    "*.webc": "html",
+    "*.webc": "html"
   },
   "workbench.startupEditor": "newUntitledFile",
   "files.insertFinalNewline": true,
@@ -24,17 +24,17 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "github.copilot.advanced": {},
   "workbench.settings.applyToAllProfiles": [
-    "github.copilot.chat.agent.runTasks",
+    "github.copilot.chat.agent.runTasks"
   ],
   "editor.quickSuggestions": {
-    "strings": "on",
+    "strings": "on"
   },
   "tailwindCSS.includeLanguages": {
-    "erb": "html",
+    "erb": "html"
   },
   "workbench.iconTheme": "charmed-warm",
   "workbench.colorTheme": "One Dark Pro Night Flat",
@@ -42,5 +42,5 @@
   "workbench.editor.showTabs": "single",
   "vscoconut.airbnb-project-view.groupingMode": "prefix",
   "security.promptForLocalFileProtocolHandling": false,
-  "claudeCode.preferredLocation": "panel",
+  "claudeCode.preferredLocation": "panel"
 }

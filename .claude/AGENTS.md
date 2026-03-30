@@ -7,14 +7,17 @@ This repository contains dotfiles and configuration files for setting up a devel
 - Dotfiles (`.aliases`, `.zshrc`, `.exports`, etc.) are symlinked to the home directory
 - VS Code settings (`.code/`) are merged and copied to the VS Code user directory
 - Claude config (`.claude/home/`) is symlinked to `~/.claude/`
+- Ghostty config (`.ghostty/`) is symlinked to `~/.config/ghostty/`
+- Fonts (Monaspace) are installed via Homebrew cask
 
 ## Setup
 
 ### Prerequisites
 
 - macOS with zsh as the default shell
-- `jq` installed (`brew install jq`) for VS Code settings merging
 - Git installed
+
+Homebrew and `jq` will be installed automatically by the setup script if not present.
 
 ### Installation
 
@@ -33,10 +36,13 @@ This repository contains dotfiles and configuration files for setting up a devel
 
    This will:
 
+   - Install Homebrew if not present
+   - Install Monaspace fonts via Homebrew cask
    - Create an empty `.private` file for machine-specific secrets
    - Symlink all dotfiles to the home directory
    - Merge VS Code settings (shared + local) into the VS Code user directory
    - Symlink VS Code snippets
+   - Symlink Ghostty config to `~/.config/ghostty/`
    - Symlink Claude config to `~/.claude/`
 
 3. (Optional) Create machine-specific VS Code settings:

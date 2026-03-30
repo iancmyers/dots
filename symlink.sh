@@ -3,6 +3,19 @@ set -e
 
 CURRENT_DIR="$(cd "$(dirname "${(%):-%N}")" && pwd)"
 
+# Install Homebrew if not present
+if ! command -v brew &>/dev/null; then
+  echo "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Install fonts
+if ! brew list --cask font-monaspace &>/dev/null; then
+  echo "Installing Monaspace fonts..."
+  brew install --cask font-monaspace
+fi
+
 # Create .private if it doesn't exist (for machine-specific secrets)
 touch "$CURRENT_DIR/.private"
 
@@ -50,6 +63,13 @@ for FILE in snippets; do
   echo "Creating symlink to $FILE in VSCode directory."
   ln -sfn "$CURRENT_DIR/.code/$FILE" "$VSCODE_USER_DIR/$FILE"
 done
+
+# Symlink Ghostty config
+GHOSTTY_DIR="$HOME/.config/ghostty"
+mkdir -p "$GHOSTTY_DIR"
+echo "Creating symlink to Ghostty config."
+ln -sfn "$CURRENT_DIR/.ghostty/config" "$GHOSTTY_DIR/config"
+ln -sfn "$CURRENT_DIR/.ghostty/icon.icns" "$GHOSTTY_DIR/icon.icns"
 
 CLAUDE_FILES=(
   "AGENTS.md" \
