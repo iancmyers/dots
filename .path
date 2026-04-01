@@ -19,6 +19,10 @@ PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 # Yarn
 PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# Bun
+export BUN_INSTALL="$HOME/.bun"
+PATH="$BUN_INSTALL/bin:$PATH"
+
 # Tool-managed environment (uv, rustup, etc.)
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 

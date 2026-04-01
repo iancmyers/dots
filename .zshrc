@@ -39,3 +39,6 @@ function _transient_rprompt_accept_line() {
 }
 zle -N _transient_rprompt_accept_line
 bindkey '^M' _transient_rprompt_accept_line
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
