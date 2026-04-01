@@ -19,8 +19,3 @@ if [ -d "$NVM_DIR/alias" ] && [ -d "$NVM_DIR/versions/node" ]; then
     export PATH="$NVM_DIR/versions/node/$_nvm_ver/bin:$PATH"
   unset _nvm_ver _nvm_next _nvm_i
 fi
-# Bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-. "$HOME/.cargo/env"
