@@ -55,7 +55,7 @@ if [ -f "$CURRENT_DIR/.code/settings.local.json" ]; then
     "$CURRENT_DIR/.code/settings.local.json" \
     > "$VSCODE_USER_DIR/settings.json"
 else
-  cp "$CURRENT_DIR/.code/settings.json" "$VSCODE_USER_DIR/settings.json"
+  cp "$CURRENT_DIR/.code/settings.json" "$VSCODE_USER_DIR/settings.json" || true
 fi
 
 # Symlink other VS Code files (snippets, etc.)
