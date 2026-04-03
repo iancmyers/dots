@@ -4,7 +4,10 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnPaste": true,
   "editor.tabSize": 2,
-  "editor.rulers": [80, 100],
+  "editor.rulers": [
+    80,
+    100
+  ],
   "editor.fontFamily": "Monaspace Krypton Var, Input Mono, Operator Mono, Monaco, 'Courier New', monospace",
   "editor.fontSize": 14,
   "files.associations": {

@@ -1,8 +1,8 @@
 .DS_Store
 
-.private
-
-npm-debug.log
+# Machine-specific shell config — live in $HOME, not symlinked from the repo
+.zshenv.local
+.zshrc.local
 
 # Machine-specific settings
 .code/settings.local.json

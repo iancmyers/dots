@@ -21,8 +21,8 @@
 	whitespace = fix
 
 [core]
-	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+	# Use custom global excludes file
+	excludesfile = ~/.excludes
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and
 	# all kinds of trailing whitespace as an error.
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -31,8 +31,6 @@
 	whitespace = space-before-tab,trailing-space
 	# Make VSCode the default editor
 	editor = code --wait
-	# Make Atom the default editor
-	# editor = atom --wait
 	# Make `git rebase` safer on OS X
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false

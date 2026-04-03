@@ -40,3 +40,8 @@ function _transient_rprompt_accept_line() {
 zle -N _transient_rprompt_accept_line
 bindkey '^M' _transient_rprompt_accept_line
 
+# Machine-specific interactive config.
+# .zshrc.local is gitignored and not symlinked — it lives only in $HOME.
+# Use it for machine-specific aliases, functions, and tool init for interactive shells.
+# Automated installers that want to modify .zshrc should append here instead.
+[ -r "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
